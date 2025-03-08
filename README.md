@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Is It Down?
 
-First, run the development server:
+**Is It Down?** is a simple tool to check the status of a website or service. It allows users to verify whether a given URL is up or down by sending HTTP requests and providing a response based on the server's status.
+
+## Features
+
+- Check the availability of websites or services.
+- View the HTTP status code returned by the server.
+- Easy-to-use and lightweight.
+
+## Installation
+
+### Clone the repository
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/Paul-Lecomte/is-it-down.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Install dependencies
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Navigate to the project directory and install the necessary dependencies.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+cd is-it-down
+npm install
+```
 
-## Learn More
+## Usage
 
-To learn more about Next.js, take a look at the following resources:
+To check if a website is up or down, run the following command:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+node index.js <url>
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Replace `<url>` with the URL you want to check. The tool will return the HTTP status code or a message indicating whether the website is up or down.
 
-## Deploy on Vercel
+Example:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+node index.js https://www.example.com
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Output:
+
+```
+The website is up with status code: 200
+```
+
+## Contributing
+
+Feel free to fork the repository and submit pull requests. Contributions are welcome to improve the tool or add new features!
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+Made with ❤️ by [Paul Lecomte](https://github.com/Paul-Lecomte).
